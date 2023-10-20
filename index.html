@@ -1,0 +1,134 @@
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+  }
+  
+</style>
+
+<div style="position: relative;">
+  <p
+style="
+  position: absolute;
+  z-index: 10;
+  color: white;
+  left: 20px;
+  top: 20px;
+  margin: 0px;
+  font-family: sans-serif;
+  font-size: 20px;
+"
+>
+<span>Score:</span> <span id="scoreEl">0</span>
+</p>
+</p>
+<canvas></canvas>
+</div>
+<!-- Halaman Awal (Masih Kasar) -->
+<div
+      id="startScreen"
+      style="
+          position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 10;
+        left: 0;
+        margin-left: 4rem;
+        background: url('./img/startScreenBackground.png');
+        z-index: 20;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div style="text-align: center">
+        
+        <h1 style="color: white">Space Adventure</h1>
+  
+        <!-- button -->
+        <div
+          id="startButton"
+          style="cursor: pointer; position: relative; display: inline-block"
+        >
+          <img src="img/button.png" alt="Start Button" />
+          <span
+            style="
+              position: absolute;
+              color: white;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              left: 50%;
+              font-size: 16px;
+            "
+            >Start</span
+          >
+        </div>
+ 
+          <p style="color: white">Kelompok 5:</p>
+          <p style="color: white">Andhika Rizky Aulia   - 21082010171</p>
+          <p style="color: white">Nasywa Agra Nisrina   - 21082010177</p>
+          <p style="color: white">Kartika Aulia         - 21082010179</p>
+          <p style="color: white">Dewangga Nanda Arjuna - 21082010201</p>
+      </div>
+    </div>
+
+    <!-- Sementara Abaikan -->
+     <!-- restart screen -->
+  <!-- background container -->
+  <div
+  id="restartScreen"
+  style="
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('./img/startScreenBackground.png');
+    z-index: 20;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <div style="text-align: center">
+    <h1 style="color: white; font-size: 24px">Game Over</h1>
+    <h1 id="finalScore" style="color: white; margin: 0; font-size: 48px">
+      300
+    </h1>
+    <p style="color: white; margin-top: 0">Points</p>
+
+    <!-- button -->
+    <div
+      id="restartButton"
+      style="cursor: pointer; position: relative; display: inline-block"
+    >
+      <img src="./img/button.png" alt="Restart Button" />
+      <span
+        style="
+          position: absolute;
+          color: white;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          left: 50%;
+        "
+        >Restart</span
+      >
+    </div>
+  </div>
+</div>
+<canvas></canvas>
+<!-- Import Howl untuk audio -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<!-- Import Javascript -->
+<script src="script.js"></script>
+<script src="audio.js"></script>
